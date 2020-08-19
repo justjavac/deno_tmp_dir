@@ -13,7 +13,7 @@ export default function tmpDir(): string | null {
   switch (Deno.build.os) {
     case "linux":
     case "darwin":
-     return Deno.env.get("TMPDIR") ?? null;
+      return Deno.env.get("TMPDIR") ?? null;
     case "windows":
       return Deno.env.get("TMP") ?? null;
   }
